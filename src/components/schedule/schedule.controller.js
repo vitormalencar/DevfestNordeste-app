@@ -21,10 +21,14 @@
     ///////////////
 
     function load() {
-      ScheduleFactory.get().then(function(data) {
-        vm.attractions = data;
-        $ionicLoading.hide();
-      });
+      ScheduleFactory.get().then(
+        function(data) {
+          vm.attractions = data;
+          $ionicLoading.hide();
+        },
+        function(error) {
+          $ionicLoading.hide();
+        });
     }
 
     function goSheduleDetails(attraction) {

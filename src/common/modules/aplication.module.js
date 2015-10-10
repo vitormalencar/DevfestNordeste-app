@@ -8,9 +8,10 @@
   ]);
   angular.module('devfest.components', [
     'devfest.menu',
-    'devfest.Schedule',
     'devfest.about',
-    'devfest.speakers'
+    'devfest.Schedule',
+    'devfest.speakers',
+    'devfest.location'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',
@@ -23,6 +24,7 @@
   // ]);
   angular.module('devfest.utils', [
     'ngIOS9UIWebViewPatch',
-    'ngCordova'
+    'ngCordova',
+    'ngMap'
   ]);
 }());

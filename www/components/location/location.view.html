@@ -1,0 +1,16 @@
+
+<ion-view view-title="Location">
+  <ion-content class="padding location-view">
+    <div class="item item-body"><map data-tap-disabled="true" map-type-id="ROADMAP" center="{{vm.location.position.lat}},{{vm.location.position.lng}}" zoom="18" disable-default-u-i="true" class="map">
+        <marker position="{{vm.location.position.lat}},{{vm.location.position.lng}}" visible="true"></marker></map></div>
+    <div class="location-position">
+      <div class="row">
+        <div class="col col-top">
+          <p class="location-place"><strong>{{vm.location.place}}</strong></p>
+          <p>{{vm.location.address}}</p>
+          <p>{{vm.location.city}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

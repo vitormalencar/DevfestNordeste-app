@@ -105,9 +105,10 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
   ]);
   angular.module('devfest.components', [
     'devfest.menu',
-    'devfest.Schedule',
     'devfest.about',
-    'devfest.speakers'
+    'devfest.Schedule',
+    'devfest.speakers',
+    'devfest.location'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',
@@ -120,7 +121,8 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
   // ]);
   angular.module('devfest.utils', [
     'ngIOS9UIWebViewPatch',
-    'ngCordova'
+    'ngCordova',
+    'ngMap'
   ]);
 }());
 
@@ -209,6 +211,94 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
 
 (function() {
   'use strict';
+
+  angular
+    .module('devfest.location', [])
+    .controller('LocationController', LocationController);
+
+  LocationController.$inject = ['$ionicLoading', '$scope', 'LocationFactory'];
+
+  function LocationController($ionicLoading, $scope, LocationFactory) {
+    var vm = this;
+    vm.location = [];
+    vm.map = {};
+
+
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+
+    activate();
+
+    function activate() {
+      LocationFactory.getLocation().then(
+        function(data) {
+          vm.location = data;
+          $ionicLoading.hide();
+        },
+        function(error) {
+          $ionicLoading.hide();
+        });
+    }
+
+    $scope.$on('mapInitialized', function(map) {
+      vm.map = map;
+    });
+  }
+})();
+
+(function() {
+  'use strict';
+
+  angular
+    .module('devfest.location')
+    .factory('LocationFactory', LocationFactory);
+
+  LocationFactory.$inject = ['$http', '$q'];
+
+  function LocationFactory($http, $q) {
+    var service = {
+      getLocation: getLocation
+    };
+
+    return service;
+
+    function getLocation() {
+      var dfd = $q.defer();
+      $http.get('data/location.json')
+        .success(function(data) {
+          console.log(data);
+          dfd.resolve(data);
+        })
+        .error(function(error) {
+          dfd.reject(error);
+        })
+      return dfd.promise;
+    }
+  }
+})();
+
+(function() {
+  'use strict';
+  angular.module('devfest.location').config([
+    '$stateProvider',
+    function($stateProvider) {
+      $stateProvider
+        .state('app.location', {
+          url: '/location',
+          views: {
+            'menuContent': {
+              templateUrl: 'components/location/location.view.html',
+              controller: 'LocationController as vm'
+            }
+          }
+        })
+    }
+  ]);
+}());
+
+(function() {
+  'use strict';
   angular
     .module('devfest.menu', [])
     .controller('MenuController', MenuController);
@@ -264,10 +354,14 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
     ///////////////
 
     function load() {
-      ScheduleFactory.get().then(function(data) {
-        vm.attractions = data;
-        $ionicLoading.hide();
-      });
+      ScheduleFactory.get().then(
+        function(data) {
+          vm.attractions = data;
+          $ionicLoading.hide();
+        },
+        function(error) {
+          $ionicLoading.hide();
+        });
     }
 
     function goSheduleDetails(attraction) {

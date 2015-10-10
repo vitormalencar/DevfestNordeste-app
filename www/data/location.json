@@ -1,9 +1,9 @@
 {
-  "place": "Example University",
-  "address": "Example Avenue, 111",
-  "city": "Example City",
+  "place": "Recife Antigo",
+  "address": "Praça Rio Branco (Marco Zero)",
+  "city": "Bairro do Recife",
   "position": {
-    "lat": "-3.771020",
-    "lng": "-38.483531"
-  }   
+    "lat": "-8.063149",
+    "lng": "-34.871311"
+  }
 }

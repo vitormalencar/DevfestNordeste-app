@@ -1,0 +1,12 @@
+ion-view(view-title='Location')
+  ion-content.padding.location-view
+    .item.item-body
+      map.map(data-tap-disabled="true",map-type-id='ROADMAP',  center="{{vm.location.position.lat}},{{vm.location.position.lng}}", zoom="18", disable-default-u-i="true")
+        marker(position="{{vm.location.position.lat}},{{vm.location.position.lng}}", visible="true")
+    .location-position
+      .row
+        .col.col-top
+          p.location-place
+            strong {{vm.location.place}}
+          p {{vm.location.address}}
+          p {{vm.location.city}}

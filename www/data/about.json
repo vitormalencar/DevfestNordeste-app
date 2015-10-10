@@ -1,13 +1,13 @@
 {
-  "name": "Conference Example",
-  "edition": "Example Edition",
-  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.",
-  "logo": "http://devevents.github.io/conf-app-boilerplate/static/img/about/logo.png",
+  "name": "GDG DevFest",
+  "edition": "2015",
+  "description": "O maior evento da comunidade Google nordestina! Palestrantes impressionantes e muita diversão!",
+  "logo": "../img/defest2014.jpg",
   "contact": {
-    "website": "example.com",
-    "email": "conf@example.com",
-    "twitter": "@example",
-    "facebook": "example.conf",
-    "github": "example.conf"
+    "website": "https://2015.devfestne.com.br/",
+    "email": "ne@devfest.com.br",
+    "twitter": "@DevfestNE",
+    "facebook": "https://www.facebook.com/DevFestNE",
+    "github": "https://github.com/DevFestNordeste"
   }
 }

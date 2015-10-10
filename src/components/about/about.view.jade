@@ -1,0 +1,22 @@
+ion-view(view-title='About').about-view
+  ion-nav-title
+    span About
+  ion-content
+    .about
+      .item.title
+        h2.about-name {{vm.about.name}}
+        p.about-edition {{vm.about.edition}}
+      .item.item-image
+        img.full-image.about-image(ng-src="{{vm.about.logo}}")
+      .item.item-body
+        center
+          p.about-description(ng-bind-html="vm.about.description")
+          br
+        .about-buttons
+          .row
+            .col
+              a.button.button-small.button-outline.button-block(ng-if="vm.about.contact.website", href="", ng-click="vm.goToUrl('http://{{vm.about.contact.website}}')") Visit Website
+              a.button.button-small.button-outline.button-block(ng-if="vm.about.contact.email", href="", ng-click="vm.goToUrl('mailto:{{vm.about.contact.email}}')") Send Email
+              a.button.button-small.button-outline.button-block(ng-if="vm.about.contact.twitter", href="", ng-click="vm.goToUrl('http://twitter.com/{{vm.about.contact.twitter}}')") Twitter
+              a.button.button-small.button-outline.button-block(ng-if="vm.about.contact.facebook", href="", ng-click="vm.goToUrl('http://www.facebook.com/{{vm.about.contact.facebook}}')") Facebook
+              a.button.button-small.button-outline.button-block(ng-if="vm.about.contact.github", href="", ng-click="vm.goToUrl('http://https://github.com/{{vm.about.contact.github}}')") Github

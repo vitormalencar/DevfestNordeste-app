@@ -105,7 +105,8 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
   ]);
   angular.module('devfest.components', [
     'devfest.menu',
-    'devfest.Schedule'
+    'devfest.Schedule',
+    'devfest.about'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',
@@ -121,6 +122,89 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
     // 'ngCordova'
   ]);
 }());
+
+(function() {
+  'use strict';
+  angular
+    .module('devfest.about', [])
+    .controller('AboutController', AboutController);
+
+  AboutController.$inject = ['$ionicLoading', '$state', 'AboutFactory'];
+
+  function AboutController($ionicLoading, $state, AboutFactory) {
+    var vm = this;
+    vm.about = [];
+    vm.goToUrl = goToUrl;
+
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+
+    load();
+
+    ///////////////
+
+    function load() {
+      AboutFactory.get().then(function(data) {
+        vm.about = data;
+        $ionicLoading.hide();
+      });
+    }
+
+    function goToUrl(url) {
+      window.open(url, '_blank', 'location=yes')
+    }
+  }
+})();
+
+(function() {
+  'use strict';
+  angular.module('devfest.about').config([
+    '$stateProvider',
+    function($stateProvider) {
+      $stateProvider
+        .state('app.about', {
+          url: '/about',
+          views: {
+            'menuContent': {
+              templateUrl: 'components/about/about.view.html',
+              controller: 'AboutController as vm'
+            }
+          }
+        })
+    }
+  ]);
+}());
+
+(function() {
+  'use strict';
+  angular
+    .module('devfest.about')
+    .factory('AboutFactory', AboutFactory);
+
+  AboutFactory.$inject = ['$http', '$q'];
+
+  function AboutFactory($http, $q) {
+
+    var service = {
+      get: get
+    };
+
+    return service;
+
+    function get() {
+      var dfd = $q.defer();
+      $http.get('data/about.json')
+        .success(function(data) {
+          dfd.resolve(data);
+        })
+        .error(function(error) {
+          dfd.reject(error);
+        })
+      return dfd.promise;
+    }
+  }
+})();
 
 (function() {
   'use strict';

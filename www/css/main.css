@@ -4758,7 +4758,15 @@ color: #ddd;}
  .button.button-light.button-icon {
 border-color: transparent;
 background: none;}
- .button.button-stable:hover {
+ .button.button-light.button-outline {
+border-color: #ddd;
+background: transparent;
+color: #ddd;}
+.button.button-light.button-outline.active, .button.button-light.button-outline.activated {
+  background-color: #ddd;
+  box-shadow: none;
+  color: #fff;}
+  .button.button-stable:hover {
 color: #444;
 text-decoration: none;}
  .button.button-positive {
@@ -4780,7 +4788,15 @@ color: #387ef5;}
  .button.button-positive.button-icon {
 border-color: transparent;
 background: none;}
- .button.button-calm:hover {
+ .button.button-positive.button-outline {
+border-color: #387ef5;
+background: transparent;
+color: #387ef5;}
+.button.button-positive.button-outline.active, .button.button-positive.button-outline.activated {
+  background-color: #387ef5;
+  box-shadow: none;
+  color: #fff;}
+  .button.button-calm:hover {
 color: #fff;
 text-decoration: none;}
  .button.button-assertive {
@@ -4802,7 +4818,15 @@ color: #ef473a;}
  .button.button-assertive.button-icon {
 border-color: transparent;
 background: none;}
- .button.button-balanced:hover {
+ .button.button-assertive.button-outline {
+border-color: #ef473a;
+background: transparent;
+color: #ef473a;}
+.button.button-assertive.button-outline.active, .button.button-assertive.button-outline.activated {
+  background-color: #ef473a;
+  box-shadow: none;
+  color: #fff;}
+  .button.button-balanced:hover {
 color: #fff;
 text-decoration: none;}
  .button.button-energized:hover {
@@ -4830,6 +4854,14 @@ color: #444;}
  .button.button-dark.button-icon {
 border-color: transparent;
 background: none;}
+ .button.button-dark.button-outline {
+border-color: #444;
+background: transparent;
+color: #444;}
+.button.button-dark.button-outline.active, .button.button-dark.button-outline.activated {
+  background-color: #444;
+  box-shadow: none;
+  color: #fff;}
 .button-small {
   padding: 2px 4px 1px;
   min-width: 28px;
@@ -4882,7 +4914,20 @@ background: none;}
  background: none;}
   .button-clear.active, .button-clear.activated {
  opacity: 0.3;}
-  .padding > .button.button-block:first-child {
+.button-outline {
+  -webkit-transition: opacity .1s;
+  transition: opacity .1s;
+  background: none;
+  box-shadow: none;}
+  .button-outline.button-outline {
+ border-color: #b2b2b2;
+ background: transparent;
+ color: #b2b2b2;}
+ .button-outline.button-outline.active, .button-outline.button-outline.activated {
+background-color: #b2b2b2;
+box-shadow: none;
+color: #fff;}
+.padding > .button.button-block:first-child {
   margin-top: 0;}
 .button-block {
   display: block;
@@ -5545,6 +5590,45 @@ display: block;}
  .attraction-view .attraction-description ul {
 list-style: inherit;
 padding-left: 40px;}
+.menu-logo {
+  margin: 0 auto;
+  max-width: 250px;
+  margin-top: 50px;
+  margin-left: 10px;}
+.about-view {
+  background: #eaeaea;}
+  .about-view .about .item.title {
+ background-color: #e8e242;}
+  .about-view .about .item-image {
+ border-top: none;}
+  .about-view .about-name {
+ text-align: center;
+ text-transform: uppercase;
+ color: #313131;
+ font-weight: bold;
+ font-size: calc(12px + 6px);}
+  .about-view .about-edition {
+ text-align: center;
+ color: #313131;
+ font-weight: bold;
+ font-size: calc(12px + 2px);}
+  .about-view .about-description {
+ margin-top: 0;}
+  .about-view .about-buttons {
+ background-color: #fff;}
+ .about-view .about-buttons .row, .about-view .about-buttons .col {
+padding: 0;}
+ .about-view .about-buttons .button {
+margin: 8px;
+border-color: #313131;
+color: #313131;}
+.about-view .about-buttons .button.activated {
+  background-color: #313131;
+  color: #fff;}
+ .about-view .about-buttons .col:first-child {
+margin-right: 8px;}
+ .about-view .about-buttons .col:last-child {
+margin-left: 8px;}
  @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
  .bar {
 border: none;
@@ -5706,3 +5790,4 @@ width: 100%;}
  transform: scale(1);
  opacity: 1;}
 }
+  

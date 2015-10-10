@@ -1,0 +1,23 @@
+
+<ion-view view-title="About" class="about-view">
+  <ion-nav-title><span>About</span></ion-nav-title>
+  <ion-content>
+    <div class="about">
+      <div class="item title">
+        <h2 class="about-name">{{vm.about.name}}</h2>
+        <p class="about-edition">{{vm.about.edition}}</p>
+      </div>
+      <div class="item item-image"><img ng-src="{{vm.about.logo}}" class="full-image about-image"/></div>
+      <div class="item item-body">
+        <center>
+          <p ng-bind-html="vm.about.description" class="about-description"></p><br/>
+        </center>
+        <div class="about-buttons">
+          <div class="row">
+            <div class="col"><a ng-if="vm.about.contact.website" href="" ng-click="vm.goToUrl('http://{{vm.about.contact.website}}')" class="button button-small button-outline button-block">Visit Website</a><a ng-if="vm.about.contact.email" href="" ng-click="vm.goToUrl('mailto:{{vm.about.contact.email}}')" class="button button-small button-outline button-block">Send Email</a><a ng-if="vm.about.contact.twitter" href="" ng-click="vm.goToUrl('http://twitter.com/{{vm.about.contact.twitter}}')" class="button button-small button-outline button-block">Twitter</a><a ng-if="vm.about.contact.facebook" href="" ng-click="vm.goToUrl('http://www.facebook.com/{{vm.about.contact.facebook}}')" class="button button-small button-outline button-block">Facebook</a><a ng-if="vm.about.contact.github" href="" ng-click="vm.goToUrl('http://https://github.com/{{vm.about.contact.github}}')" class="button button-small button-outline button-block">Github</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -8,7 +8,8 @@
   ]);
   angular.module('devfest.components', [
     'devfest.menu',
-    'devfest.Schedule'
+    'devfest.Schedule',
+    'devfest.about'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',

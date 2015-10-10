@@ -1,0 +1,10 @@
+
+<ion-view class="attraction-view">
+  <ion-nav-title><span>{{vm.attraction.title}}</span></ion-nav-title>
+  <ion-content><img ng-show="vm.attraction.speakers.length == 1" ng-src="{{vm.attraction.speakers[0].image}}" class="speaker-image"/>
+    <div class="attraction-details"><span ng-bind-html="vm.attraction.title" class="attraction-title"></span><span ng-show="vm.attraction.speakers" class="attraction-speakers"></span>By<span ng-repeat="speaker in vm.attraction.speakers" class="attraction-speaker">{{speaker.name}}<span class="attraction-speaker-concat">{{$last ? &#39;&#39; : &#39; &#38; &#39;}}</span></span></div>
+    <div class="attraction-description">
+      <p ng-bind-html="vm.attraction.description"></p>
+    </div>
+  </ion-content>
+</ion-view>

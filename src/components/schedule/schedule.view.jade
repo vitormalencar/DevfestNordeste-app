@@ -1,0 +1,19 @@
+ion-view(view-title='Schedule')
+  ion-content.padding.schedule-view
+    .item.item-text-wrap.card(ng-repeat="attraction in vm.attractions track by $index")
+      .row
+        .col.attraction-time
+          span.time-start {{attraction.time.start}}
+          span.time-finish(ng-show='attraction.time.finish')  to {{attraction.time.finish}}
+        a.col.col-75.attraction-content(ng-if="attraction.type !== 'general'", class='{{attraction.type}}', style='background-image:url({{attraction.background_img}})',  ng-click='vm.goSheduleDetails(attraction)')
+          p.attraction-title(ng-bind-html='attraction.title')
+          p.attraction-speakers(ng-show='{{ attraction.speakers }}')
+            span(ng-repeat='speaker in attraction.speakers') {{speaker.name}}{{$last ? '' : ', '}}
+          p.attraction-room(ng-show='attraction.room') {{attraction.room}}
+          .attraction-type-tag(class="{{attraction.type+'-attraction'}}") {{attraction.type}}
+        .col.col-75.attraction-content(ng-if="attraction.type === 'general'", class='{{attraction.type}}')
+          p.attraction-title(ng-bind-html='attraction.title')
+          p {{attraction.description}}
+          p.attraction-room(ng-if='attraction.room') Local : {{attraction.room}}
+
+              

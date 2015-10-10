@@ -1,0 +1,19 @@
+
+<ion-view view-title="Schedule">
+  <ion-content class="padding schedule-view">
+    <div ng-repeat="attraction in vm.attractions track by $index" class="item item-text-wrap card">
+      <div class="row">
+        <div class="col attraction-time"><span class="time-start">{{attraction.time.start}}</span><span ng-show="attraction.time.finish" class="time-finish"> to {{attraction.time.finish}}</span></div><a ng-if="attraction.type !== 'general'" style="background-image:url({{attraction.background_img}})" ng-click="vm.goSheduleDetails(attraction)" class="col col-75 attraction-content {{attraction.type}}">
+          <p ng-bind-html="attraction.title" class="attraction-title"></p>
+          <p ng-show="{{ attraction.speakers }}" class="attraction-speakers"><span ng-repeat="speaker in attraction.speakers">{{speaker.name}}{{$last ? '' : ', '}}</span></p>
+          <p ng-show="attraction.room" class="attraction-room">{{attraction.room}}</p>
+          <div class="attraction-type-tag {{attraction.type+'-attraction'}}">{{attraction.type}}</div></a>
+        <div ng-if="attraction.type === 'general'" class="col col-75 attraction-content {{attraction.type}}">
+          <p ng-bind-html="attraction.title" class="attraction-title"></p>
+          <p>{{attraction.description}}</p>
+          <p ng-if="attraction.room" class="attraction-room">Local : {{attraction.room}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

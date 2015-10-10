@@ -1,0 +1,65 @@
+.platform-android .bar.bar-header {
+  height: 60px;
+}
+
+.platform-android .bar {
+  padding: 10px;
+
+  .notification-badage {
+    top: 18px;
+    z-index: 999;
+  }
+}
+
+.platform-android .has-header {
+  top: 60px;
+}
+
+.platform-android .bar .title {
+  line-height: 62px;
+  text-align: left;
+}
+
+// stuipid safary mess around and im need to do this
+.title.title-center.header-item {
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center;
+}
+
+.pane.view {
+  background-color: #f8f6f6;
+}
+
+.agenda-footer {
+  height: 10px;
+  background-color: #33d4c7;
+}
+
+.platform-android.agenda-footer {
+  height: 5px;
+  background-color: #33d4c7;
+}
+
+.platform-android .has-footer {
+  bottom: 20px !important;
+}
+
+.has-footer {
+  bottom: 10px!important;
+}
+
+.logo-icon {
+  margin: 0 auto !important;
+  margin-top: 6px !important;
+  max-height: 80%;
+}
+
+.side-menu {
+  background-color: rgb(97, 97, 97);
+}
+
+
+.popup{
+  border-radius: 5px!important;
+}

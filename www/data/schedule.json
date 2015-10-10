@@ -1,0 +1,84 @@
+[{
+  "id": "1",
+  "title": "Credenciamento",
+  "description": "Não se esqueça do seu ingresso e um documento com foto!",
+  "time": {
+    "start": "8:00",
+    "finish": "9:00"
+  },
+  "type": "general",
+  "room": "Nós Coworking",
+  "date": "17 de Outubro"
+}, {
+  "id": "2",
+  "title": "Google Play Services Rocks!!!",
+  "time": {
+    "start": "90:30",
+    "finish": "10:10"
+  },
+  "type": "talk",
+  "speakers": [{
+    "name": "Nelson Glauber [C.E.S.A.R]",
+    "image": "https://2015.devfestne.com.br/img/people/NelsonGlauber.jpg"
+  }],
+  "background_img": "https://2015.devfestne.com.br/img/people/NelsonGlauber.jpg",
+  "description": "Com o Google Play Services, você pode adicionar aos seus aplicativos recursos fantásticos e tirar proveito dos mais recentes dos serviços do Google como Maps e Google+. Tudo isso com atualizações automáticas de plataforma distribuídos como um APK através da loja Google Play. Nessa apresentação conheceremos os principais recursos e APIs disponíveis no Google Play Services.",
+  "room": "Android",
+  "date": "17 de Outubro"
+}, {
+  "id": "3",
+  "title": "I Love Pixels",
+  "time": {
+    "start": "90:30",
+    "finish": "10:10"
+  },
+  "type": "talk",
+  "speakers": [{
+    "name": "Ítalo Waxman [Tecsinapse]",
+    "image": "https://2015.devfestne.com.br/img/people/ItaloWaxman.jpg"
+  }],
+  "background_img": "https://2015.devfestne.com.br/img/people/ItaloWaxman.jpg",
+  "description": "Quando falamos em front-end, logo pensamos em várias linhas de código. Porém, não podemos esquecer que antes da etapa de codificação, vem a etapa de conversão daquele 'lindo layout'. A ideia da palestra é justamente a de passar dicas e as melhores práticas a serem feitas para alcançarmos a maior fidelidade e executarmos essa tarefa de forma rápida e sem dificuldades.",
+  "room": "Android",
+  "date": "17 de Outubro"
+}, {
+  "id": "4",
+  "title": "JavaScript Wearable",
+  "time": {
+    "start": "90:30",
+    "finish": "10:10"
+  },
+  "type": "talk",
+  "speakers": [{
+    "name": "Bruno Lima [C.E.S.A.R]",
+    "image": "https://2015.devfestne.com.br/img/people/BrunoLima.jpg"
+  }],
+  "background_img": "https://2015.devfestne.com.br/img/people/BrunoLima.jpg",
+  "description": "Web Developer, recifense, headbanger, motociclista e apaixonado por desenvolvimento web, focado no front-end. Mais de 7 anos de experiencia, passando por empresas de softwares e o agitado mercado de agência. Foi líder da equipe de Front-end na Fishy em Recife e atualmente é Front-end Developer no C.E.S.A.R. É voluntário da Mozilla, apoiando e desenvolvendo a open web e neutralidade da rede. E também é membro do NodeBots Rec, fazendo robôs muito loucos com JavaScript.",
+  "room": "Android",
+  "date": "17 de Outubro"
+}, {
+  "id": "5",
+  "title": "Bootstrap 4: o que esperar?",
+  "time": {
+    "start": "90:30",
+    "finish": "10:10"
+  },
+  "type": "talk",
+  "speakers": [{
+    "name": "Luiz Tiago Oliveira [Wobo Inc]",
+    "image": "https://2015.devfestne.com.br/img/people/Luiz.jpg"
+  }],
+  "background_img": "https://2015.devfestne.com.br/img/people/Luiz.jpg",
+  "description": "Com os adventos do mobile first, junto com o crescimento dos planos pré-pago das operadoras brasileiras, desenvolver uma aplicação inovadora e pecar na performance front-end não é a melhor solução. A nova versão do Bootstrap possui algumas melhorias que ajudam bastante isto. São abordados também alguns pontos de boas práticas, bem como a utilização de mixins e extends, sem a importação de todo o código do Bootstrap. Baseada no projeto bootstraptherightway.com, inspirado no jstherightway.org e em outros ^=therightway. Alguns dos exemplos serão apresentados usando Angular, e o PageSpeed para o comparativo com a versão anterior.",
+  "room": "Android",
+  "date": "17 de Outubro"
+}, {
+  "id": "4",
+  "title": "Close",
+  "time": {
+    "start": "18:00"
+  },
+  "type": "general",
+  "date": "day1"
+}]

@@ -1,0 +1,14 @@
+ion-view.attraction-view
+  ion-nav-title
+    span {{vm.attraction.title}}
+  ion-content
+    img.speaker-image(ng-show="vm.attraction.speakers.length == 1", ng-src="{{vm.attraction.speakers[0].image}}")
+    .attraction-details
+      span.attraction-title(ng-bind-html="vm.attraction.title")
+      span.attraction-speakers(ng-show="vm.attraction.speakers")
+      | By
+      span.attraction-speaker(ng-repeat="speaker in vm.attraction.speakers")
+        | {{speaker.name}}
+        span.attraction-speaker-concat {{$last ? &#39;&#39; : &#39; &#38; &#39;}}
+    .attraction-description
+      p(ng-bind-html="vm.attraction.description")

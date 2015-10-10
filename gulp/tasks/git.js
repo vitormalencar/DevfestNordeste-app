@@ -14,7 +14,7 @@ var knownOptions = {
   b: 'b',
   m: 'm',
   default: {
-    b: process.env.NODE_ENV || '2.0.0',
+    b: process.env.NODE_ENV || 'master',
     m: process.env.NODE_ENV || 'Update ' + date
   }
 };

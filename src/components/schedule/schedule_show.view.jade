@@ -1,6 +1,9 @@
 ion-view.attraction-view
+  ion-nav-buttons(side="right")
+    a.button.button-icon.icon.ion-share.share-attraction(ng-click="vm.share(vm.attraction)" style='margin-top:8px;')
   ion-nav-title
     span {{vm.attraction.title}}
+    
   ion-content
     img.speaker-image(ng-show="vm.attraction.speakers.length == 1", ng-src="{{vm.attraction.speakers[0].image}}")
     .attraction-details

@@ -22,6 +22,6 @@
   // ]);
   angular.module('devfest.utils', [
     'ngIOS9UIWebViewPatch',
-    // 'ngCordova'
+    'ngCordova'
   ]);
 }());

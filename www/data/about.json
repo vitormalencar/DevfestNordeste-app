@@ -1,8 +1,8 @@
 {
   "name": "GDG DevFest",
-  "edition": "2015",
+  "edition": "Norderste 2015",
   "description": "O maior evento da comunidade Google nordestina! Palestrantes impressionantes e muita diversão!",
-  "logo": "../img/defest2014.jpg",
+  "logo": "img/defest2014.jpg",
   "contact": {
     "website": "https://2015.devfestne.com.br/",
     "email": "ne@devfest.com.br",

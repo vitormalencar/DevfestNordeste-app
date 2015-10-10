@@ -14,14 +14,14 @@
   .about-name {
     text-align: center;
     text-transform: uppercase;
-    color: $top-bar-bg;
+    color: $main-menu-color;
     font-weight: bold;
     @include cssCalc("font-size", "#{($font-size)} + 6px");
   }
 
   .about-edition {
     text-align: center;
-    color: $top-bar-bg;
+    color: $main-menu-color;
     font-weight: bold;
     @include cssCalc("font-size", "#{($font-size)} + 2px");
   }

@@ -1515,7 +1515,7 @@ $dark: #444 !default;
  * normalize.css v2.1.2 | MIT License | git.io/normalize * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -5448,7 +5448,7 @@ float: left;}
 * {
   color: #313131;}
 .bar.app-top-bar {
-  background-color: #313131;}
+  background-color: #303f9f;}
   .bar.app-top-bar .title {
  color: #fff !important;}
  .bar.app-top-bar .title * {
@@ -5458,7 +5458,7 @@ color: #fff !important;}
  .bar.app-top-bar .button * {
 color: #fff !important;}
 .menu-header-bar {
-  background-color: #313131;}
+  background-color: #303f9f;}
   .menu-header-bar .menu-header-bar-title {
  color: #fff;}
 .loading-container .loading * {
@@ -5503,7 +5503,7 @@ color: #4b4b4b;
 display: block;}
   .schedule-view .attraction-content {
  text-decoration: none;
- background-color: #afb6bb;
+ background-color: #b3b9e2;
  background-size: 73vw;
  background-position-y: 15%;
  min-height: 40vw;
@@ -5523,7 +5523,7 @@ height: 100%;
 width: 100%;
 border-radius: 5px 5px 0 0;}
  .schedule-view .attraction-content.talk:after {
-background-color: rgba(22, 160, 133, 0.6);}
+background-color: rgba(63, 81, 181, 0.6);}
  .schedule-view .attraction-content .attraction-title {
 font-size: calc(12px + 4px);
 font-weight: 500;
@@ -5536,7 +5536,7 @@ font-size: 12px;
 z-index: 100;
 position: relative;
 margin-bottom: 0;
-color: red;}
+color: #727272;}
  .schedule-view .attraction-content .attraction-speakers {
 z-index: 100;
 position: relative;
@@ -5574,7 +5574,7 @@ font-size: calc(12px + 4px);
 font-weight: 500;
 display: block;}
  .attraction-view .attraction-details .attraction-speakers {
-color: #e8e242;
+color: #448AFF;
 font-size: calc(12px + 2px);
 font-weight: 400;
 display: block;}
@@ -5598,18 +5598,18 @@ padding-left: 40px;}
 .about-view {
   background: #eaeaea;}
   .about-view .about .item.title {
- background-color: #e8e242;}
+ background-color: #448AFF;}
   .about-view .about .item-image {
  border-top: none;}
   .about-view .about-name {
  text-align: center;
  text-transform: uppercase;
- color: #313131;
+ color: #fff;
  font-weight: bold;
  font-size: calc(12px + 6px);}
   .about-view .about-edition {
  text-align: center;
- color: #313131;
+ color: #fff;
  font-weight: bold;
  font-size: calc(12px + 2px);}
   .about-view .about-description {
@@ -5620,10 +5620,10 @@ padding-left: 40px;}
 padding: 0;}
  .about-view .about-buttons .button {
 margin: 8px;
-border-color: #313131;
-color: #313131;}
+border-color: #303f9f;
+color: #303f9f;}
 .about-view .about-buttons .button.activated {
-  background-color: #313131;
+  background-color: #303f9f;
   color: #fff;}
  .about-view .about-buttons .col:first-child {
 margin-right: 8px;}

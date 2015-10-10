@@ -1,10 +1,7 @@
-.about-view {
-  background:#fff;
+.speakers-view {
+  background: $content-bg;
 
-  .about {
-    .item{
-      border: none;
-    }
+  .speaker {
     .item.title {
       background-color: $main-menu-bg;
     }
@@ -14,28 +11,41 @@
     }
   }
 
-  .about-name {
+  .speaker-name {
     text-align: center;
     text-transform: uppercase;
-    color: $main-menu-color;
+    color: $top-bar-bg;
     font-weight: bold;
+
+    // font-size: 18px;
     @include cssCalc("font-size", "#{($font-size)} + 6px");
   }
 
-  .about-edition {
-    text-align: center;
-    color: $main-menu-color;
-    font-weight: bold;
-    @include cssCalc("font-size", "#{($font-size)} + 2px");
-  }
-
-  .about-description {
+  .speaker-bio {
     margin-top: 0;
   }
 
-  .about-buttons {
-    background-color: $actions-bg;
+  .speaker-tags {
+    margin-bottom: 10px;
 
+    .speaker-tags-list {
+      @include flexbox();
+      @include flex-wrap(wrap);
+    }
+
+    .badge {
+      position: initial;
+      margin: 4px 2px;
+      background-color: $main-menu-bg;
+    }
+
+    .speaker-tag-item {
+      text-align: center;
+    }
+  }
+
+  .speaker-buttons {
+    background-color: $actions-bg;
 
     .row,
     .col {
@@ -43,7 +53,7 @@
     }
 
     .button {
-      margin: 8px;
+      margin: 0;
       border-color: $top-bar-bg;
       color: $top-bar-bg;
 
@@ -59,7 +69,6 @@
 
     .col:last-child {
       margin-left: 8px;
-      border:none;
     }
   }
 }

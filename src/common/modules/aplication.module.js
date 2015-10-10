@@ -9,7 +9,8 @@
   angular.module('devfest.components', [
     'devfest.menu',
     'devfest.Schedule',
-    'devfest.about'
+    'devfest.about',
+    'devfest.speakers'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',

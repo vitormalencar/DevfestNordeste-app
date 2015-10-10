@@ -3766,6 +3766,9 @@ margin: 0 auto;}
 .tabs .tab-item .badge.badge-positive, .badge.badge-positive {
   background-color: #387ef5;
   color: #fff;}
+.tabs .tab-item .badge.badge-energized, .badge.badge-energized {
+  background-color: #ffc900;
+  color: #fff;}
 .tabs .tab-item .badge.badge-dark, .badge.badge-dark {
   background-color: #444;
   color: #fff;}
@@ -5513,7 +5516,12 @@ display: block;}
  background-size: 100%;}
  .schedule-view .attraction-content.general {
 min-height: 20vw;}
-.schedule-view .attraction-content.talk:after, .schedule-view .attraction-content.lightningtalk:after, .schedule-view .attraction-content.workshop:after, .schedule-view .attraction-content.keynote:after {
+ .schedule-view .attraction-content.talk{
+margin-bottom: 25px;
+border-radius: 5px 5px 0 0;}
+.schedule-view .attraction-content.talk .attraction-title, .schedule-view .attraction-content.talk .attraction-room{
+  color: #fff;}
+ .schedule-view .attraction-content.talk:after, .schedule-view .attraction-content.lightningtalk:after, .schedule-view .attraction-content.workshop:after, .schedule-view .attraction-content.keynote:after {
 content: "";
 display: block;
 position: absolute;
@@ -5554,6 +5562,11 @@ border-radius: 0 0 4px 4px;
 height: 25px;
 line-height: 25px;
 padding: 0 14px;}
+.schedule-view .attraction-content .attraction-type-tag.talk-attraction {
+  background: #32408f;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #fff;}
 .nav-bar-title {
   text-transform: capitalize;}
 .icon.button.share-attraction::before {
@@ -5596,7 +5609,9 @@ padding-left: 40px;}
   margin-top: 50px;
   margin-left: 10px;}
 .about-view {
-  background: #eaeaea;}
+  background: #fff;}
+  .about-view .about .item {
+ border: none;}
   .about-view .about .item.title {
  background-color: #448AFF;}
   .about-view .about .item-image {
@@ -5628,6 +5643,52 @@ color: #303f9f;}
  .about-view .about-buttons .col:first-child {
 margin-right: 8px;}
  .about-view .about-buttons .col:last-child {
+margin-left: 8px;
+border: none;}
+.speakers-view {
+  background: #eaeaea;}
+  .speakers-view .speaker .item.title {
+ background-color: #448AFF;}
+  .speakers-view .speaker .item-image {
+ border-top: none;}
+  .speakers-view .speaker-name {
+ text-align: center;
+ text-transform: uppercase;
+ color: #303f9f;
+ font-weight: bold;
+ font-size: calc(12px + 6px);}
+  .speakers-view .speaker-bio {
+ margin-top: 0;}
+  .speakers-view .speaker-tags {
+ margin-bottom: 10px;}
+ .speakers-view .speaker-tags .speaker-tags-list {
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+flex-wrap: wrap;
+-webkit-flex-wrap: wrap;}
+ .speakers-view .speaker-tags .badge {
+position: initial;
+margin: 4px 2px;
+background-color: #448AFF;}
+ .speakers-view .speaker-tags .speaker-tag-item {
+text-align: center;}
+  .speakers-view .speaker-buttons {
+ background-color: #fff;}
+ .speakers-view .speaker-buttons .row, .speakers-view .speaker-buttons .col {
+padding: 0;}
+ .speakers-view .speaker-buttons .button {
+margin: 0;
+border-color: #303f9f;
+color: #303f9f;}
+.speakers-view .speaker-buttons .button.activated {
+  background-color: #303f9f;
+  color: #fff;}
+ .speakers-view .speaker-buttons .col:first-child {
+margin-right: 8px;}
+ .speakers-view .speaker-buttons .col:last-child {
 margin-left: 8px;}
  @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
  .bar {

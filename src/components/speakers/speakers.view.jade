@@ -1,0 +1,20 @@
+ion-view(view-title='Speakers')
+  ion-content.padding.speakers-view
+    .card(ng-repeat="speaker in vm.speakers")
+        .list.speaker
+          .item.title
+            h2.speaker-name {{speaker.name}}
+          .item.item-image
+            img.full-image.speaker-image(ng-src="{{speaker.photo}}")
+          .item.item-body
+            .speaker-tags
+              ul.speaker-tags-list
+                li.speaker-tag-item(ng-repeat="tag in speaker.tags")
+                  span.badge.badge-energized {{tag}}
+            p.speaker-bio(ng-bind-html="speaker.bio")
+            .speaker-buttons
+              .row
+                .col(ng-if="speaker.twitter")
+                  a.button.button-small.button-outline.button-block(href="", ng-click="vm.goToUrl('http://twitter.com/{{speaker.twitter}}')") @{{speaker.twitter}}
+                //- .col
+                  //- a.button.button-small.button-outline.button-block(ui-sref="app.attraction({attractionId: speaker.attraction_id})") My talk

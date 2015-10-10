@@ -1,20 +1,17 @@
-[
-  {
-    "name":"Speaker 1",
-    "bio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n",
-    "photo":"http://devevents.github.io/conf-app-boilerplate/static/img/speakers/speaker.png",
-    "company":"Company 1",
-    "twitter":"example1",
-    "tags":["Company", "Framework"],
-    "attraction_id":"2"
-  },
-  {
-    "name":"Speaker 2",
-    "photo":"http://devevents.github.io/conf-app-boilerplate/static/img/speakers/speaker.png",
-    "bio":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n",
-    "company":"Company 2",
-    "twitter":"example2",
-    "tags":["Company", "Framework"],
-    "attraction_id":"5"
-  }
-]
+[{
+  "name": "Nelson Glauber",
+  "bio": "Engenheiro de Sistemas, C.E.S.A.R Google Developer Expert \n",
+  "photo": "https://2015.devfestne.com.br/img/people/NelsonGlauber.jpg",
+  "company": "C.E.S.A.R",
+  "twitter": "nglauber",
+  "tags": ["GDE", "Google Play"],
+  "attraction_id": "2"
+}, {
+  "name": "Ítalo Waxman ",
+  "bio": "Graduado em Design Gráfico, especialista em interfaces web e contribuidor Open-Source nas horas vagas, descobriu durante sua jornada o poder do front-end e de como usá-lo em prol de melhores expriências . Atualmente trabalha como Deisigner/Front-ender na Tecsinapse, é o Idealizador/Organizador do Rock and Code e faz parte de projetos como Custom Elements, Js Rocks e Braziljs Conf. Verdadeiro amante dos pixels, preza pelos mínimos detalhes, acabamento impecável nos seus trabalhos e por isso acredita que esse sentimento possa ser compartilhado em prol de uma web melhor. \n",
+  "photo": "https://2015.devfestne.com.br/img/people/ItaloWaxman.jpg",
+  "company": "Tecsinapse",
+  "twitter": "italowaxman",
+  "tags": ["Design"],
+  "attraction_id": "3"
+}]

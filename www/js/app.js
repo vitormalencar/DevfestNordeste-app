@@ -106,7 +106,8 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
   angular.module('devfest.components', [
     'devfest.menu',
     'devfest.Schedule',
-    'devfest.about'
+    'devfest.about',
+    'devfest.speakers'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',
@@ -382,6 +383,86 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
     }
   }
 })();
+
+(function() {
+  'use strict';
+
+  angular
+    .module('devfest.speakers', [])
+    .controller('SpeakersController', SpeakersController);
+
+  SpeakersController.$inject = ['$ionicLoading', '$state', 'SpeakersFactory'];
+
+  function SpeakersController($ionicLoading, $state, SpeakersFactory) {
+    var vm = this;
+    vm.speakers = {};
+
+    vm.goToUrl = goToUrl;
+
+    load();
+
+    function load() {
+      SpeakersFactory.get().then(
+        function(data) {
+          vm.speakers = data;
+        }
+      )
+    }
+
+    function goToUrl(url) {
+      window.open(url, '_blank', 'location=yes')
+    }
+  }
+})();
+
+(function() {
+  'use strict';
+
+  angular
+    .module('devfest.speakers')
+    .factory('SpeakersFactory', SpeakersFactory);
+
+  SpeakersFactory.$inject = ['$http', '$q'];
+
+  function SpeakersFactory($http, $q) {
+    var service = {
+      get: get
+    };
+
+    return service;
+
+    function get() {
+      var dfd = $q.defer();
+      $http.get('data/speakers.json')
+        .success(function(data) {
+          dfd.resolve(data);
+        })
+        .error(function(error) {
+          dfd.reject(error);
+        })
+      return dfd.promise;
+    }
+  }
+})();
+
+(function() {
+  'use strict';
+  angular.module('devfest.speakers').config([
+    '$stateProvider',
+    function($stateProvider) {
+      $stateProvider
+        .state('app.speakers', {
+          url: '/speakers',
+          views: {
+            'menuContent': {
+              templateUrl: 'components/speakers/speakers.view.html',
+              controller: 'SpeakersController as vm'
+            }
+          }
+        })
+    }
+  ]);
+}());
 
 (function() {
   'use strict';

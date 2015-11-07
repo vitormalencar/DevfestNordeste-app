@@ -108,7 +108,8 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
     'devfest.about',
     'devfest.Schedule',
     'devfest.speakers',
-    'devfest.location'
+    'devfest.location',
+    'devfest.sponsors'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',
@@ -551,6 +552,102 @@ angular.module('ngIOS9UIWebViewPatch', ['ng']).config([
             'menuContent': {
               templateUrl: 'components/speakers/speakers.view.html',
               controller: 'SpeakersController as vm'
+            }
+          }
+        })
+    }
+  ]);
+}());
+
+(function() {
+  'use strict';
+
+  angular
+    .module('devfest.sponsors',[])
+    .controller('SponsorsController', SponsorsController);
+
+  SponsorsController.$inject = ['$ionicLoading', 'SponsorsFactory'];
+
+  function SponsorsController($ionicLoading, SponsorsFactory) {
+    var vm = this;
+
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+
+    load();
+
+    ///////////////
+
+    function load() {
+      SponsorsFactory.get().then(
+        function(data) {
+          console.log(data);
+          $ionicLoading.hide();
+        },
+        function(error) {
+          console.log(error);
+          $ionicLoading.hide();
+        });
+    }
+
+    function goToUrl(url) {
+      window.open(url, '_blank', 'location=yes')
+    }
+
+  }
+})();
+
+(function() {
+  'use strict';
+
+  angular
+    .module('devfest.sponsors')
+    .factory('SponsorsFactory', SponsorsFactory);
+
+  SponsorsFactory.$inject = ['$http', '$q'];
+
+  function SponsorsFactory($http, $q) {
+    var service = {
+      get: get
+    };
+
+    return service;
+
+    function get() {
+      var dfd = $q.defer();
+      $http.get('data/sponsors.json')
+        .success(function(data) {
+          var gold = data.filter(function() { return data.sponsors.type === 'gold'});
+          var silver = data.filter(function() { return data.sponsors.type === 'silver'});
+          var bronze = data.filter(function() { return data.sponsors.type === 'bronze'});
+          // dfd.resolve({
+          //   "gold": gold,
+          //   "silver": silver,
+          //   "bronze": bronze
+          // })
+          dfd.resolve(data);
+        })
+        .error(function(error) {
+          dfd.reject(error);
+        })
+      return dfd.promise;
+    }
+  }
+})();
+
+(function() {
+  'use strict';
+  angular.module('devfest.sponsors').config([
+    '$stateProvider',
+    function($stateProvider) {
+      $stateProvider
+        .state('app.sponsors', {
+          url: '/sponsors',
+          views: {
+            'menuContent': {
+              templateUrl: 'components/sponsors/sponsors.view.html',
+              controller: 'AboutController as vm'
             }
           }
         })

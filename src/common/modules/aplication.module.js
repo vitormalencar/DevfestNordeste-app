@@ -11,7 +11,8 @@
     'devfest.about',
     'devfest.Schedule',
     'devfest.speakers',
-    'devfest.location'
+    'devfest.location',
+    'devfest.sponsors'
   ]);
   // angular.module('devfest.factories', [
   //   // 'devfest.api',
